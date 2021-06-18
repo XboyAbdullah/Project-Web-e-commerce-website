@@ -1,0 +1,153 @@
+[
+        {
+            "name" : "T-Shirt",
+            "price" : 500,
+            "description" : "Cotton t-shirt",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Clothes",
+            "seller": "Ebay",
+            "stock":25,
+            "Number_of_reviews" : 20 ,
+            "reviews":[]
+        },
+        {
+            "name" : "Pants",
+            "price" : 800,
+            "description" : "jeans pants for men",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Clothes",
+            "seller": "Ebay",
+            "stock":25,
+            "Number_of_reviews" : 32,
+            "reviews":[]
+        },
+        {
+            "name" : "Shorts",
+            "price" : 400,
+            "description" : "Men wear cotton summer shorts",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Clothes",
+            "seller": "Ebay",
+            "stock":15,
+            "Number_of_reviews" :21 ,
+            "reviews":[]
+        },
+        {
+            "name" : "Watch",
+            "price" : 1200,
+            "description" : "Fashionable men's watch",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Accessories",
+            "seller": "daraz",
+            "stock":1,
+            "Number_of_reviews" : 3,
+            "reviews":[]
+        },
+        {
+            "name" : "slippers",
+            "price" : 200,
+            "description" : "Summer wear for men, comfortable and airy",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Shoes",
+            "seller": "Ebay",
+            "stock":20,
+            "Number_of_reviews" : 42,
+            "reviews":[]
+        },
+        {
+            "name" : "Air Conditioner",
+            "price" : 80000,
+            "description" : "Haier AC",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Electronics",
+            "seller": "Daraz",
+            "stock":2,
+            "Number_of_reviews" :24 ,
+            "reviews":[]
+        },
+        {
+            "name" : "Fridge",
+            "price" : 55000,
+            "description" : "Haier fridge",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Eletronics",
+            "seller": "Daraz",
+            "stock":1,
+            "Number_of_reviews" : 112,
+            "reviews":[]
+        },
+        {
+            "name" : "lipstick",
+            "price" : 200,
+            "description" : "MAT lipstick",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Beauty/Health",
+            "seller": "Daraz",
+            "stock":200,
+            "Number_of_reviews" :324 ,
+            "reviews":[]
+        },
+        {
+            "name" : "Soap",
+            "price" : 50,
+            "description" : "palmolive soap",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Beauty/Health",
+            "seller": "Daraz",
+            "stock":400,
+            "Number_of_reviews" :544,
+            "reviews":[]
+        },
+        {
+            "name" : "Sherlock Holmes and the riddle of time",
+            "price" : 450,
+            "description" : "A famous book",
+            "ratings": 4.5,
+            "Images" : [{
+                "public_id" :"",
+                "url": ""
+            }],
+            "Category": "Books",
+            "seller": "Ebay",
+            "stock":5,
+            "Number_of_reviews" : 250,
+            "reviews":[]
+        }
+
+]
