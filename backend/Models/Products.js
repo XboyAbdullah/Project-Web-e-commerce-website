@@ -52,7 +52,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    Stock:{
+    stock:{
         type : Number,
         maxlength: 5,
         default: 0
@@ -81,4 +81,7 @@ const productSchema = new mongoose.Schema({
         default: Date.now
     }
 
-})
+});
+
+const Products = mongoose.model("Products", productSchema);
+module.exports = Products;

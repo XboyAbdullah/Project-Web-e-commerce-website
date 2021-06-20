@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+const errorMiddleWere = require('./middlewares/Errors')
+
+
 app.use(express.json());
 
 
@@ -9,7 +12,8 @@ app.use(express.json());
 const products = require('./routes/products');
 
 app.use('/api/v1', products);
-
+// Middlewere to handle errors
+app.use(errorMiddleWere);
 
 
 
