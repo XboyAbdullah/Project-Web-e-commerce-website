@@ -19,7 +19,7 @@ process.on('unhandledPromiseRejection', err => {
     console.log(`Error : ${err.message}`);
     console.log(`Shuttinng down the server`);
     server.close(() => {
-        process.exit(1)
+        process.exit(1)     
     })
 })
 
