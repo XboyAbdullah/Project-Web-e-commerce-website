@@ -8,7 +8,6 @@ module.exports = (req, res, err, next) => {
             error: err,
             errMessage: err.message,
             stack: err.stack
-            
         });
     };
 
@@ -25,13 +24,30 @@ module.exports = (req, res, err, next) => {
 
         // Handling mongoose validation console.error
         if(err.name = 'ValidationError'){
-            const message = Object.values(err.errors).map(value => values.message);
+            const message = Object.values(err.errors).map(value => value.message);
             error = new ErrorHandler(message, 400)
+        }
+
+        //Handling mongoose duplicate key errors
+        if (err.code === 11000){
+            const message = `Duplicate ${Object.keys(err.keyValue)} entered`; 
+             error = new ErrorHandler(message, 400)
+        }
+
+        // Handling wrong jwt errors
+        if (err.name === JsonWebTokenError){
+            const message = 'Json web token is invalid. Try again'; 
+             error = new ErrorHandler(message, 400)
+        }
+        // Handling expired jwt errors
+        if (err.name === TokenExpiredError){
+            const message = 'Json web token is Expired. Try again'; 
+             error = new ErrorHandler(message, 400)
         }
 
         res.status(error.statusCode).json({
             success: false,
             message: error.message || 'Internaal Server Error'
         });
-    };
+    }
 };
