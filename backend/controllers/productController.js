@@ -10,8 +10,7 @@ exports.NewProduct = AsyncErrors(async(req, res, next) => {
     req.body.user = req.user.id;                      // getting user ID to show User name as a reference 
 
    const product = await Products.create(req.body);
-    console.log("NewProduct");
-
+   
     res.status(201).json({
         success: true,
         product
@@ -25,12 +24,13 @@ exports.getProducts = AsyncErrors(async (req, res, next) => {
     .search()
     .filter()
     .pagination(resultsPerPage)
-    const product = await apiFeatures.query;
+    const Products = await apiFeatures.query;
     
     res.status(200).json({
         success : true,
         productCount,
-        product
+        resultsPerPage,
+        products
     });
 });
 
