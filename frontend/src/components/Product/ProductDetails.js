@@ -7,6 +7,8 @@ import Metadata from '../layouts/Metadata'
 import {Carousel} from 'react-bootstrap'
 
 const ProductDetails = ({match}) => {
+
+
     const dispatch = useDispatch();
     const {loading, error, product} = useSelector(state => state.productDetails)
     const alert = useAlert();    
@@ -45,7 +47,7 @@ const ProductDetails = ({match}) => {
                 <div className="rating-outer">
                     <div className="rating-inner" style = {{width: `${(product.ratings/5)*100}%`}}></div>
                 </div>
-                <span id="no_of_reviews">({product.Num_Of_Reviews} Reviews)</span>
+                <span id="no_of_reviews">({product.Num_Of_reviews} Reviews)</span>
 
                 <hr/>
 
