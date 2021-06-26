@@ -5,13 +5,12 @@ import {GetProducts} from '../Actions/ProductActions'
 import Product from './Product/Product'
 import {useAlert} from 'react-alert'
 import Loader from './layouts/Loader'
-import { Pagination} from 'react-bootstrap'
-
-
-
+import  Pagination from 'react-js-pagination'
 
 
 function Home({match}) {
+
+
   const alert = useAlert();
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -51,23 +50,23 @@ function Home({match}) {
               {resultsPerPage <= productCount &&(
               <div className = "d-flex justify-content-center mt-5">
                 <Pagination 
-                activepage = {currentPage}
-                itemscountperpage = {resultsPerPage }
-                totalitemscount = {productCount}
+                activePage = {currentPage}
+                itemsCountPerPage = {resultsPerPage }
+                totalItemsCount = {productCount}
                 onChange = {setCurrentPageNo}
-                nextpagetext = {'Next'}
-                prevpagetext = {"Prev"}
-                firstpagetext = {'First'}
-                lastpagetext = {'Last'}
-                itemclass = "page-item"
-                linkclass = "page-link"
-                />
+                nextPageText = {'Next'}
+                prevPageText = {"Prev"}
+                firstPageText = {'First'}
+                lastPageText = {'Last'}
+                itemClass = "page-item"
+                linkClass = "page-link"
+                ></Pagination>
               </div>
               )}
             </div>
           )}
         </div>
     )
-}
+};
 
-export default Home
+export default Home;

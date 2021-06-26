@@ -9,22 +9,24 @@ exports.NewProduct = AsyncErrors(async(req, res, next) => {
 
     req.body.user = req.user.id;                      // getting user ID to show User name as a reference 
 
-   const product = await Products.create(req.body);
+   const products = await Products.create(req.body);
    
     res.status(201).json({
         success: true,
-        product
+        products
     });
 });
 
 exports.getProducts = AsyncErrors(async (req, res, next) => {
-    const resultsPerPage = 8;
+    
+    const resultsPerPage = 4;
     const productCount = await Products.countDocuments();
-    const apiFeatures = new ApiFeatures(Products.find(), req.query)
+ 
+   const apiFeatures = new ApiFeatures(Products.find(), req.query)
     .search()
     .filter()
     .pagination(resultsPerPage)
-    const Products = await apiFeatures.query;
+    const products = await apiFeatures.query;
     
     res.status(200).json({
         success : true,
@@ -134,7 +136,7 @@ exports.DeleteReview = AsyncErrors(async(res, req, next) => {
     const  ratings  = product.reviews.reduce((acc, item) => item.ratings +acc , 0)/reviews.length;
     
     await product.findById(req.query.productId, {
-        reviews,
+        review,
         ratings,
         numberOfReviews,
     },

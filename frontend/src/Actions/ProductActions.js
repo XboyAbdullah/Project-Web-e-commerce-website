@@ -5,9 +5,9 @@ import {ALL_PRODUCTS_REQUESTS, ALL_PRODUCTS_SUCCESS, ALL_PRODUCTS_FAIL, PRODUCTS
 export const GetProducts = (keyword = '',currentPage = 1) => async (dispatch) => {
     try{
         dispatch({type: ALL_PRODUCTS_REQUESTS})
-        //const {data} = await axios.get('/api/v1/products')
-        const {data} = await axios.get(`/api/v1/products?keyword = ${keyword}&page=${currentPage}`)
-
+        const {data} = await axios.get('/api/v1/products');
+        //const {data} = await axios.get(`/api/v1/products?keyword = ${keyword}&page=${currentPage}`)
+        console.log(data);
         dispatch({
             type: ALL_PRODUCTS_SUCCESS,
             payload: data
